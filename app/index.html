@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Hipotiroidismo</title>
+	<meta content="Descripción del proyecto" name="description" />
+	<meta name="robots" content="index, follow" />
+	<meta name="keywords" content="hipotiroidismo,tiroide,hipotiroide,ipotiroidismo,hipertiroidismo">
+	<meta name="description" content="El Hipotiroidismo es una enfermedad que se origina por la falta de la hormona tiroidea en nuestro organismo Hipotiroidismo puede ser controlada médicamente con un tratamiento adecuado.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link href="http://local.mediatrends/Hipotiroidismo/app/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/Hipotiroidismo.css">
+	<script src="js/swiper.js"></script>
+	<script src="js/Hipotiroidismo.js"></script>
+</head>
+<body>
+	<div class="inside-page">
+		<div class="header">
+			<div class="content-header">
+				<div class="top-header">
+					<div class="logotype">
+						<img src="../app/img/logo.jpg" alt="">
+					</div>
+					<div class="info-header">
+						<ul>
+							<li><i class="fa fa-envelope-o"></i><span>correo:</span> <a href="mailto:info@hipotiroidismo.cl?Subject=Hipotiroidismo">info@hipotiroidismo.cl</a></li>
+							<li><i class="fa fa-phone"></i><span>tel:</span> +56 22 200 123 456</li>
+						</ul>
+					</div> 
+				</div>
+				<div class="body-header">
+					<div class="swiper-container gallery-thumbs">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide" style="background-image:url(../app/img/hipoteriodismo-quiz.jpg)">
+			            	<div class="bg-blue blue-one"></div>
+			            	<div class="content-slider">
+			            		<div class="title-slider">QUIZ HIPOTERIODISMO</div>
+			            		<div class="txt-slider">Asegurate de diagnosticar a tiempo el hipotiroidismo</div>
+			            	</div>
+			            </div>
+			            <div class="swiper-slide" style="background-image:url(../app/img/hipoteriodismo-testimonio.jpg)">
+			            	<div class="bg-blue blue-two"></div>
+			            	<div class="content-slider">
+			            		<div class="title-slider">TESTIMONIOS</div>
+			            		<div class="txt-slider">No estás solo, muchas personas padecen esta enfermedad y llevan una vida normal</div>
+			            	</div>
+			            </div>
+			            <div class="swiper-slide" style="background-image:url(../app/img/hipoteriodismo-noticias.jpg)">
+			            	<div class="bg-blue blue-three"></div>
+			            	<div class="content-slider">
+			            		<div class="title-slider">NOTICIAS</div>
+			            		<div class="txt-slider">Novedades sobre tratamientos del hipotiroidismo y mucho más</div>
+			            	</div>
+			            </div>
+			        </div>
+			    	</div>
+				</div>	
+			</div>
+		</div>
+		<div class="proximamente-content">
+			<div class="center-windows">
+				<div class="slider-texto">
+					<div class="proximamente-txt">
+						<div class="prox-title">PROXIMAMENTE</div>
+						<div class="prox-bajada">todo sobre <span>hipotiroidismo</span></div>
+						<div class="line-prox"></div>
+						<div class="bajada-prox">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mi nibh, fringilla vel sollicitudin ac, aliquam id erat. Nulla et urna commodo.</div>
+					</div>
+					<div class="bg-color"></div>
+				</div>	
+			</div>	
+		</div>	
+	</div>
+	<div class="content-page">
+		<div class="image-bg">
+			<div class="swiper-container gallery-top">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide" style="background-image:url(../app/img/hipoteriodismo-quiz.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(../app/img/hipoteriodismo-testimonio.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(../app/img/hipoteriodismo-noticias.jpg)"></div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<script>
+	    var galleryThumbs = new Swiper('.gallery-thumbs', {
+	        slidesPerView: 'auto',
+	        slideToClickedSlide: true,
+	        centeredSlides: true,
+	        autoplay: 3500,
+	        speed: 500,
+       		autoplayDisableOnInteraction: true,
+       		loop: true,
+       		loopAdditionalSlides: 3,
+       		breakpoints:{
+				468:{
+					slidesPerView: 1,
+				}
+			}
+	    });
+	    var galleryTop = new Swiper('.gallery-top', {
+	        spaceBetween: 0,
+	        loop: true,
+       		loopAdditionalSlides: 3,
+       		effect: 'fade'
+	    });
+	    galleryTop.params.control = galleryThumbs;
+	    galleryThumbs.params.control = galleryTop;
+	</script>
+</body>
+</html>

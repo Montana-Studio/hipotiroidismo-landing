@@ -1,0 +1,59 @@
+body {
+	@include span-columns(12);
+	@include omega();
+	font:{family:$font-first;}
+	position: absolute;
+	height: 100%;
+	top:0;
+	left:0;
+	margin:0;
+}
+.content-page {
+	@include span-columns(12);
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 1;
+	@include media($mobileLand) {
+		height: 120%;
+	}
+	.center-windows {
+		@include outer-container(80%);
+		position: relative;
+		width: 100%;
+   	 	height: 100%;
+	}
+	.image-bg {
+		@include span-columns(12);
+		height: 100%;
+		position: absolute;
+		top:0;
+		left:0;
+		z-index: 1;
+		.swiper-container {
+	        width: 100%;
+	        margin-left: auto;
+	        margin-right: auto;
+	    }
+	    .swiper-slide {
+	        background-size: cover;
+	        background-position: center;text-align: center;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+	    }
+	    .gallery-top {
+	        height: 100%;
+	        width: 100%;
+	    }
+	}
+}

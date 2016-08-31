@@ -1,0 +1,362 @@
+.inside-page {
+	@include span-columns(12);
+	position: absolute;
+	top:25px;
+	left:0;
+	z-index: 2;
+	@include media($mobileLand) {
+		top: 10px;
+		overflow: scroll;
+	}
+	@include media($notebook) {
+		top:50px;
+	}
+}
+.header {
+	@include span-columns(12);
+	.content-header {
+		@include outer-container(80%);
+		background:$white;
+		.top-header {
+			@include span-columns(12);
+			@include omega();
+			@include pad(10px 20px);
+			@include media($notebook) {
+				@include pad(15px 30px);
+			}	
+			.logotype {
+				@include span-columns(8);
+				@include omega();
+				@include media($mobileLand) {
+					@include span-columns(3);
+					@include omega();
+					padding: {top:8px;}	
+				}
+				@include media($tablet) {
+					@include span-columns(4);
+					@include omega();
+					padding: {top:8px;}	
+				}
+				@include media($tabletLand) {
+					@include span-columns(3);
+					@include omega();
+					background: red;
+				}
+				@include media($notebook) {
+					@include span-columns(2.5);
+					@include omega();	
+				}
+				img {
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
+			.info-header {
+				@include span-columns(12);
+				@include omega();
+				@include media($mobileLand) {
+					@include span-columns(9);
+					@include omega();	
+					float: right;
+				}
+				@include media($tablet) {
+					@include span-columns(8);
+					@include omega();
+					padding: {top:8px;}	
+					float: right;
+				}
+				@include media($tabletLand) {
+					@include span-columns(8);
+					@include omega();
+					float: right;
+				}
+				@include media($notebook) {
+					@include span-columns(7);
+					@include omega();	
+					float: right;
+				}
+				float: right;
+				font:{size:0.8em;}
+				color:$gray_2;
+				@include media($mobileLand) {
+					font:{size:0.7em;}
+				}
+				ul {
+					@include span-columns(12);
+					margin:0;
+					padding:{top:5px;left:0;right:0;}
+					li {
+						display: inline-block;
+						margin:{bottom:5px;right:0px;}
+						float: left;
+						@include media($tabletLand) {
+							float: right;
+							margin:{left:10px;}
+						}
+						@include media($notebook) {
+							margin:{bottom:0px;right:20px;}
+							float: right;
+						}
+						i {
+							color:$blue;
+							margin:{right:5px;}
+						}
+						span {
+							font:{weight:bold;}
+							color:$gray;
+						}
+						a {
+							color:$gray_2;
+							text:{decoration:none;}
+						}
+					}
+				}
+			}
+		}
+		.body-header {
+			@include span-columns(12);
+			background:$white;
+			overflow: hidden;
+			height: 150px;
+			@include media($mobileLand) {
+				height: 120px;
+			}
+			@include media($tablet) {
+				height: 160px;
+			}
+			@include media($notebook) {
+				height: 180px;
+			}
+			.swiper-container {
+				@include span-columns(12);
+				@include omega();
+				height: inherit;
+				.swiper-wrapper {
+					height: inherit;
+					.swiper-slide {
+						width: 33.3%;
+						margin:0;
+						background-position: center;
+						background-size: cover;
+						height: 150px;
+						@include media($mobileLand) {
+							height: 120px;
+							width: 33.3%;
+						}
+						@include media($tablet) {
+							height: 160px;
+						}
+						@include media($notebook) {
+							height: 180px;
+						}
+					}
+				}
+				&.gallery-thumbs {
+			        box-sizing: border-box;
+			        padding:0;
+			        .swiper-slide {
+				        height: 100%;
+				        opacity: 0.8;
+				        .bg-blue {
+				        	width: 100%;
+				        	height: 100%;
+				        	position: absolute;
+				        	top:0;
+				   			left:0;
+				   			z-index: 2;
+				   			opacity: 0.7;
+				   			background:#5e98df;
+				   			&.blue-one {
+								background:#5e98df;
+				   			}
+				   			&.blue-two {
+				   				background:#5e98df;
+				   			}
+				   			&.blue-three {
+				   				background:#5e98df;
+				   			}
+				        }
+				        .content-slider {
+				        	@include span-columns(12);
+				        	@include pad(20px);
+				        	height: 100%;
+				        	position: absolute;
+				        	top:0;
+				   			left:0;
+				   			z-index: 3;
+							width: 100%;
+				   			color:$white;
+							box-sizing: border-box;
+							@include media($mobileLand) {
+								@include pad(10px);
+							}
+							@include media($notebook) {
+								@include pad(30px);
+							}
+							.title-slider {
+								@include span-columns(12);
+								font:{size:1.3em;weight:bold;}
+								margin:{bottom:0px;}
+								@include media($mobileLand) {
+									font:{size:0.8em;}
+								}
+								@include media($tablet) {
+									font:{size:1em;}
+								}	
+								@include media($notebook) {
+									margin:{bottom:10px;}
+								}
+							}
+							.txt-slider {
+								font:{size:0.9em;}
+								line-height: 23px;
+								@include media($mobileLand) {
+									font:{size:0.7em;}
+									line-height: 18px;
+								}
+							}
+				        }
+				    }
+				    .swiper-slide-active {
+				        opacity: 1;
+				        .bg-blue {
+				        	opacity: 0.9;
+				        	
+				        	background:#7ac3dd;
+				        }	
+				    }
+			    }
+			}
+		}
+	}
+}
+.proximamente-content {
+	@include span-columns(12);
+	position: relative;
+	margin:{top:30px;}
+	@include media($mobileLand) {
+		margin:{top: 2px;}
+	}
+	@include media($notebook) {
+		margin:{top:100px;}
+	}
+	.center-windows {
+		@include outer-container(80%);
+		position: relative;
+		width: 100%;
+		height: 100%;
+		.slider-texto {
+			@include span-columns(12);
+			@include pad(20px);
+			@include media($tabletLand) {
+				@include span-columns(6);
+				float: right;
+				@include pad(45px 30px);
+			}
+			@include media($notebook) {
+				@include span-columns(5);
+				float: right;
+				@include pad(50px 30px);
+			}
+			right:0;
+			z-index: 2;	
+			.proximamente-txt {
+				position:relative;
+				z-index: 4;
+				width: 100%;
+				height: 100%;
+				.prox-title {
+					font:{size:1.5em;weight:bold;}
+					color:$gray_3;
+					line-height: 1em;
+					margin:5px 0;
+					@include media($tablet) {
+						font:{size:2.4em;}
+					}
+					@include media($tabletLand) {
+						font:{size:2.4em;}
+					}
+					@include media($notebook) {
+						font:{size:2.4em;weight:bold;}
+						margin:0;
+					}
+					@include media($desktop) {
+						font:{size:3em;weight:bold;}
+						margin:0;
+					}
+				}
+				.prox-bajada {
+					font:{size:0.9em;weight:bold;}
+					color:$gray_3;
+					text:{transform:uppercase;}
+					margin:{bottom:0;}
+					@include media($tablet) {
+						font:{size:1.5em;}
+					}
+					@include media($tabletLand) {
+						font:{size:1.1em;}
+					}
+					@include media($notebook) {
+						font:{size:1.2em;weight:bold;}
+					}
+					span {
+						color:$orange;
+					}
+				}
+				.line-prox {
+					width: 80px;
+					height: 2px;
+					background:$orange;
+					margin:{top:6px;bottom:15px;}
+					@include media($tablet) {
+						margin:{top:5px;bottom:15px;}
+					}
+					@include media($tabletLand) {
+						margin:{top:10px;bottom:20px;}
+					}
+				}
+				.bajada-prox {
+					font:{size:0.9em;}
+					line-height: 1.4em;
+					color:$gray_2;
+					@include media($tablet) {
+						font:{size:1.1em;}
+						line-height: 1.6em;
+					}
+					@include media($tabletLand) {
+						font:{size:0.9em;}
+						line-height: 1.6em;
+					}
+					@include media($notebook) {
+						font:{size:0.9em;}
+						line-height: 1.5em;
+					}
+				}
+			}
+			.bg-color {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 3;	
+				background: $white;
+				opacity: 0.8;
+				top:0;
+				left:0;
+				@include media($tabletLand) {
+					@include span-columns(6);
+					right:0;
+					left:inherit;
+				}
+				@include media($notebook) {
+					@include span-columns(5);
+					right:0;
+					left:inherit;
+				}
+				@include media($notebook) {
+					opacity: 0.6;
+				}
+			}
+		}	
+	}
+}
